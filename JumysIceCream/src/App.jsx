@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './Component/Navbar'
+import HeaderRaoutes from './Routes/HeaderRaoutes'
 
-function App() {
+const App =() => {
 
   return (
     
-       <Navbar/>
+     <HeaderRaoutes/>
+
   )
 }
 
