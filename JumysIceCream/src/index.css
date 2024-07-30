@@ -16,6 +16,7 @@
     background-color: red;
     transition:0.3s;
   }
+
   
   .underline-animate:hover::after {
     width: 100%;
@@ -34,7 +35,7 @@
     }
     #navbar{
          
-    display: none;
+    display:none;
 
     }
     #button {
