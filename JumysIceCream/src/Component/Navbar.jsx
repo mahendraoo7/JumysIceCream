@@ -52,15 +52,31 @@ const Navbar = () => {
   const ShopMenu = () => {
     return (
       <div className="">
-        <ul className="">
-          <div className="absolute bg-white h-[400px] w-[600px] ring-2">
-            <div>
-              <NavLink to="" className="">Home</NavLink>
-              <NavLink to="" className=""></NavLink>
-              <NavLink to="" className=""></NavLink>
-              <NavLink to="" className=""></NavLink>
-            </div>
-          </div>
+        <ul className="flex justify-center">
+          <div className="absolute bg-white text-black h-[400px] w-[400px] ring-1 ring-gray-100 mt-5">
+            <div className="flex gap-5">
+              <div className="">
+             <h1 className="font-bold text-[20px]">Shop Style</h1>
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Standard</NavLink> 
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Full</NavLink>
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">ShopList</NavLink>
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Sub Category</NavLink>
+              </div>
+              <div>
+              <h1 className="font-bold text-[20px]">Woo Pages</h1>
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Order Tracking</NavLink> 
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Login</NavLink>
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Wishlist</NavLink>
+              </div>
+              <div>
+              <h1 className="font-bold text-[20px]">Mini Cart</h1>
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Cart Page</NavLink> 
+              <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Full</NavLink>
+              </div>
+
+
+              </div>
+              </div>  
         </ul>
       </div>
     );
