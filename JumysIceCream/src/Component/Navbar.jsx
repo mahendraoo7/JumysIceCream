@@ -20,7 +20,7 @@ const Navbar = () => {
   const HomeMenu = () => {
     return (
       <div className="">
-        <ul className="flex justify-center">
+        <ul className="duration-1000 flex justify-center">
           <div className="absolute bg-gray-50 text-black w-[150px] h-[300px] flex flex-col items-center space-y-3">
             <NavLink to="" className="hover:text-red-500">
               <li className="mt-5">Home 1</li>
@@ -56,7 +56,7 @@ const Navbar = () => {
     return (
       <div className="">
         <ul className="flex justify-center">
-          <div className="absolute bg-gray-50 text-black h-[450px] w-[1000px] ml-[300px]">
+          <div className="absolute bg-gray-50 text-black h-[450px] w-[1000px]">
             <div className="flex justify-around">
               <div className="space-y-2 mt-5">
              <h1 className="font-bold text-[20px]">Shop Style</h1>
@@ -200,7 +200,7 @@ const Navbar = () => {
     return (
       <div className="">
       <ul className="flex justify-around">
-        <div className="absolute bg-gray-50 text-black h-[400px] w-[900px] mr-[200px]">
+        <div className="absolute bg-gray-50 text-black h-[400px] w-[900px]">
          
           <div className="flex justify-around">
             <div className="space-y-5  mt-5">
@@ -343,8 +343,8 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <div className="bg-white border-gray-200 dark:bg-gray-900 px-10">
+    <div className="">
+      <div className="z-20 fixed w-full bg-white border-gray-200 dark:bg-gray-900 px-10">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <NavLink to="" id="Menu" className="text-[20px]">
             <i class="fa-solid fa-bars"></i>
@@ -431,6 +431,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+
+     <div className='w-full h-[60px] fixed bottom-0 flex justify-around bg-white z-20' id='Mobile'>
+      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-table-cells"></i>Shop</NavLink>
+      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-user"></i> Account</NavLink>
+      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-magnifying-glass"></i> Search</NavLink>
+      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-heart"></i> Wishlist</NavLink>
+    </div>
 
       <Outlet />
     </div>

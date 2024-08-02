@@ -47,5 +47,49 @@
     
     #Menu{
       display: none;
+
+    }
+      #Mobile{
+        display: none;
+      }
+
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(120deg);
     }
   }
+
+  
+  .flip-vertical-right {
+    -webkit-animation: flip-vertical-right 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate-reverse both;
+            animation: flip-vertical-right 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate-reverse both;
+  }
+
+
+
+
+@-webkit-keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+@keyframes flip-vertical-right {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
