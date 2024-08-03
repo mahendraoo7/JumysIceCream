@@ -17,14 +17,17 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/material": "^5.16.4",
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "@trendyol-js/react-carousel": "^3.0.2",
     "flowbite": "^2.4.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.3.1",
+    "react-card-slider-component": "^1.0.9",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "sort-by": "^1.2.0",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "use-react-slider": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

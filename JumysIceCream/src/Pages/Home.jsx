@@ -8,13 +8,14 @@ import cup from '../assets/asset 16.png'
 import img1 from '../assets/asset 17.jpeg'
 import img2 from '../assets/asset 18.jpeg'
 import img3 from '../assets/asset 19.jpeg'
+import Baz from './CardSlider'
 
 const Home = () => {
   return (
     <div className='m-0 p-0'>
-    <div className = "h-screen w-screen flex justify-end gap-20 items-center bg-no-repeat" style={{backgroundImage: `url(${bg})`}}>
+    <div className = "h-screen w-screen bg-cover flex justify-end gap-20 items-center bg-no-repeat" style={{backgroundImage: `url(${bg})`}}>
 
-      <div className='flex flex-col'>
+      <div className='flex flex-col h-full justify-center'>
         <h1 className='font-bold'>SUNDAES AND SMILES</h1>
         <h1 className='font-bold text-[35px] '>Frosty Delight <br />Treat YourSelf TO <br /> Creamy</h1>
         <div className='flex gap-3'>
@@ -24,20 +25,20 @@ const Home = () => {
       </div>
 
           
-       <div className=''>
+       <div className='flex justify-start h-full items-center'>
           <div className='absolute flex items-end h-[350px] justify-center'>
           <img className='animate-spin size-24' src={dis} alt="Not Found"/> 
           <h1 className='absolute h-[80px] flex font-bold text-white '>Get<br/>30%<br/>Off</h1>
           </div>
-          <div className='flex h-[560px] items-end'>
+          <div className='flex h-full items-end'>
           <img className='h-[450px] w-[290px]' src={Ice} alt="Not Found"/>    
          </div>
         </div>
-          <div className='h-[200px] flip-vertical-right'>
+          <div className='h-full flip-vertical-right'>
           <img className='absolute h-[100px] ' src={good} alt="Not Found"/> 
-             
+ 
           </div>
-        <div className='flex items-end h-[550px] '>
+        <div className='flex items-end h-full'>
         <h1 className='font-bold'>Choose Your <br /> Favourite Flavor!</h1>
         <img className='h-[200px]' src={flower} alt="Not Found" />
         </div>
@@ -74,11 +75,12 @@ const Home = () => {
        </div>
       </div>
 
-       <div id='ScrollMenu' className=''>
+       <div id='ScrollMenu' className='w-full'>
 
-         <div className='flex '>
-          <div className='overflow-hidden'>
-           <div className=' bg-contain flex justify-center overflow-hidden hover:scale-110 duration-1000 h-[350px] w-[500px]'style={{backgroundImage: `url(${img1})`}}> 
+         <div className='flex w-full h-[350px]'>
+         
+          <div className='overflow-hidden w-1/3'>
+           <div className='bg-cover bg-no-repeat flex justify-center overflow-hidden hover:scale-110 duration-1000 h-full'style={{backgroundImage: `url(${img1})`}}> 
              <div className='flex flex-col items-center justify-center'>
              <h1 className='jus text-[40px] font-bold text-white'>Hello</h1>
              <h1 className='text-[40px] font-bold text-white'>SUMMER!</h1>
@@ -86,15 +88,15 @@ const Home = () => {
            </div>
            </div>
 
-           <div className='overflow-hidden'>
-           <div className='bg-contain flex justify-around items-center overflow-hidden hover:scale-110 duration-1000 h-[350px] w-[500px]'style={{backgroundImage: `url(${img2})`}}>
+           <div className='overflow-hidden w-1/3 h-[350px]'>
+           <div className='bg-cover bg-no-repeat flex justify-around items-center overflow-hidden hover:scale-110 duration-1000 h-full'style={{backgroundImage: `url(${img2})`}}>
            <div className='z-10 bg-cover flex h-[120px] w-[120px] justify-center items-center text-[25px] text-white' style={{backgroundImage: `url(${dis})`}}>-30%</div>
            <div className='opacity-0'>hello</div>
            </div>
            </div>
 
-           <div className='overflow-hidden'>
-           <div className='bg-contain flex justify-center overflow-hidden hover:scale-110 duration-1000 h-[350px] w-[500px]'style={{backgroundImage: `url(${img3})`}}>
+           <div className='overflow-hidden w-1/3 h-[350px]'>
+           <div className='bg-cover bg- h-full bg-no-repeat flex justify-center overflow-hidden hover:scale-110 duration-1000 'style={{backgroundImage: `url(${img3})`}}>
             <div className='flex flex-col justify-center'>
             <h1 className='text-[40px] font-bold text-white'>Creamy</h1>
             <h1 className='text-[40px] font-bold text-white'>Enjoy</h1>
@@ -110,9 +112,8 @@ const Home = () => {
          <div className='font-serif text-[50px] font-bold'>
             <h1>Best Ice Cream Shops</h1>
          </div>
-
-         <div className='h-[300px]'>
-     
+          <div className='h-full w-screen'>
+           <Baz/>
          </div>
 
        </div>
