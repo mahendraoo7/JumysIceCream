@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@fseehawer/react-circular-slider": "^2.7.0",
+    "react-slick": "^0.30.2"
+  }
+}

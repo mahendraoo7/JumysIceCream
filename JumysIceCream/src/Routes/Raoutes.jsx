@@ -1,10 +1,12 @@
-import Home from '../Pages/Home'
+import Home from '../Component/Home'
 import Shop from '../Pages/Shop'
 import Product from '../Pages/Product'
 import Blog from '../Pages/Blog'
 import Page from '../Pages/Page'
 import { createBrowserRouter , RouterProvider } from 'react-router-dom'
 import Navbar from '../Component/Navbar'
+import Faq2 from '../Pages/Faq-2'
+import Page404 from '../Pages/page404'
 
 const RouterPlat = createBrowserRouter([
     {
@@ -28,16 +30,28 @@ const RouterPlat = createBrowserRouter([
                 element:<Blog/>
             },
             {
-                path:"/page",
+                path:"/faq2",
+                element:<Faq2/>
+            },
+            {
+                path:"*",
+                element:<Page404/>
+            },
+            {
+                path:"page",
                 element:<Page/>
             },
+            {
+                path:"page404",
+                element:<Page404/>
+            }
 
         ]
     }
 ])
 
 
-const HeaderRaoutes = () => {
+const Raoutes = () => {
   return (
     <div>
        <RouterProvider router={RouterPlat}>
@@ -47,4 +61,4 @@ const HeaderRaoutes = () => {
   )
 }
 
-export default HeaderRaoutes
+export default Raoutes

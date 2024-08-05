@@ -8,7 +8,7 @@ import cup from '../assets/asset 16.png'
 import img1 from '../assets/asset 17.jpeg'
 import img2 from '../assets/asset 18.jpeg'
 import img3 from '../assets/asset 19.jpeg'
-import Baz from './CardSlider'
+import Baz from '../Pages/CardSlider'
 
 const Home = () => {
   return (
@@ -31,7 +31,7 @@ const Home = () => {
           <h1 className='absolute h-[80px] flex font-bold text-white '>Get<br/>30%<br/>Off</h1>
           </div>
           <div className='flex h-full items-end'>
-          <img className='h-[450px] w-[290px]' src={Ice} alt="Not Found"/>    
+          <img className='h-[400px] w-[300px]' src={Ice} alt="Not Found"/>    
          </div>
         </div>
           <div className='h-full flip-vertical-right'>
@@ -76,7 +76,6 @@ const Home = () => {
       </div>
 
        <div id='ScrollMenu' className='w-full'>
-
          <div className='flex w-full h-[350px]'>
          
           <div className='overflow-hidden w-1/3'>
@@ -107,12 +106,12 @@ const Home = () => {
        </div>
                  {/* Slider part */}
 
-       <div className='flex flex-col justify-center items-center h-[500px]'>
+       <div className='flex flex-col items-center justify-around h-[500px]'>
       
-         <div className='font-serif text-[50px] font-bold'>
+         <div className='flex justify-center items-start font-serif text-[50px] font-bold'>
             <h1>Best Ice Cream Shops</h1>
          </div>
-          <div className='h-full w-screen'>
+          <div className='h-[300px] flex items-center justify-center'>
            <Baz/>
          </div>
 

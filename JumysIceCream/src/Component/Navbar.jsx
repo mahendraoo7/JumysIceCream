@@ -283,8 +283,8 @@ const Navbar = () => {
            <NavLink to="" className="hover:text-red-500">About Us</NavLink>
            <NavLink to="" className="hover:text-red-500">Contact</NavLink>
            <NavLink to="" className="hover:text-red-500">Faq</NavLink>
-           <NavLink to="" className="hover:text-red-500">Faq2</NavLink>
-           <NavLink to="" className="hover:text-red-500">Page 404</NavLink>
+           <NavLink to="Faq2" className="hover:text-red-500">Faq2</NavLink>
+           <NavLink to="page404" className="hover:text-red-500">Page 404</NavLink>
            </div>
           </div>
         </ul>
@@ -344,7 +344,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="z-20 fixed w-full bg-white border-gray-200 dark:bg-gray-900 px-10">
+      <div className="z-20 fixed w-full bg-white border-gray-200 dark:bg-gray-900 px-10 h-[100px]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <NavLink to="" id="Menu" className="text-[20px]">
             <i class="fa-solid fa-bars"></i>

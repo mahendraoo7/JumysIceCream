@@ -47,9 +47,11 @@ const slides = [
   }
 ];
 const Baz = () => {
+
+
   return (
-    <div className=" flex justify-center items-center "  style={{ marginTop: "5em" }}>
-      <ReactCardSlider slides={slides} />
+    <div className=" flex justify-center w-screen">
+        <ReactCardSlider slides={slides} />  
     </div>
   );
 };
