@@ -280,7 +280,7 @@ const Navbar = () => {
         <ul>
           <div className="absolute bg-gray-50 text-gray-500 flex justify-around w-[150px] h-[220px]">
           <div className="mt-5 grid">
-           <NavLink to="" className="hover:text-red-500">About Us</NavLink>
+           <NavLink to="about" className="hover:text-red-500">About Us</NavLink>
            <NavLink to="" className="hover:text-red-500">Contact</NavLink>
            <NavLink to="" className="hover:text-red-500">Faq</NavLink>
            <NavLink to="Faq2" className="hover:text-red-500">Faq2</NavLink>
@@ -396,7 +396,7 @@ const Navbar = () => {
                 onMouseLeave={shophandleMouseLeave}
                 className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
               >
-                Shop{" "}
+                Shop {" "}
                 <i className="fa-solid fa-angle-down"></i>
                   {shopVisible && ShopMenu()}
               </NavLink>
@@ -419,7 +419,7 @@ const Navbar = () => {
                 {blogVisible && BlogMenu()}
               </NavLink>
 
-              <NavLink to=""
+              <NavLink to="about"
                 onMouseEnter={pagehandleMouseEnter}
                 onMouseLeave={pagehandleMouseLeave}
                 className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"

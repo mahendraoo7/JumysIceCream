@@ -7,6 +7,7 @@ import { createBrowserRouter , RouterProvider } from 'react-router-dom'
 import Navbar from '../Component/Navbar'
 import Faq2 from '../Pages/Faq-2'
 import Page404 from '../Pages/page404'
+import AboutUs from '../Pages/AboutUs'
 
 const RouterPlat = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const RouterPlat = createBrowserRouter([
             {
                 path:"page404",
                 element:<Page404/>
+            },
+            {
+                path:"about",
+                element:<AboutUs/>
             }
 
         ]

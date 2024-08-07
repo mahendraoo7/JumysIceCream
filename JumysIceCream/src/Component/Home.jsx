@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './Footer'
 import bg from '../assets/bg.jpg'
 import Ice from '../assets/asset 5.png'
 import good from '../assets/asset 6.png'
@@ -8,14 +9,14 @@ import cup from '../assets/asset 16.png'
 import img1 from '../assets/asset 17.jpeg'
 import img2 from '../assets/asset 18.jpeg'
 import img3 from '../assets/asset 19.jpeg'
-import Baz from '../Pages/CardSlider'
+import CardSlider from './CardSlider'
 
 const Home = () => {
   return (
     <div className='m-0 p-0'>
-    <div className = "h-screen w-screen bg-cover flex justify-end gap-20 items-center bg-no-repeat" style={{backgroundImage: `url(${bg})`}}>
-
-      <div className='flex flex-col h-full justify-center'>
+    <div className = "h-screen w-screen bg-cover flex justify-end gap-20 items-center bg-no-repeat slide-in-elliptic-top-fwd" style={{backgroundImage: `url(${bg})`}}>
+     <div></div>
+      <div className='flex flex-col h-full justify-center roll-in-left'>
         <h1 className='font-bold'>SUNDAES AND SMILES</h1>
         <h1 className='font-bold text-[35px] '>Frosty Delight <br />Treat YourSelf TO <br /> Creamy</h1>
         <div className='flex gap-3'>
@@ -25,7 +26,7 @@ const Home = () => {
       </div>
 
           
-       <div className='flex justify-start h-full items-center'>
+       <div className='flex h-full items-center roll-in-right'>
           <div className='absolute flex items-end h-[350px] justify-center'>
           <img className='animate-spin size-24' src={dis} alt="Not Found"/> 
           <h1 className='absolute h-[80px] flex font-bold text-white '>Get<br/>30%<br/>Off</h1>
@@ -33,10 +34,9 @@ const Home = () => {
           <div className='flex h-full items-end'>
           <img className='h-[400px] w-[300px]' src={Ice} alt="Not Found"/>    
          </div>
+          <div className='h-full flex justify-center items-center flip-vertical-right'>
+          <img className=' h-[100px]' src={good} alt="Not Found"/> 
         </div>
-          <div className='h-full flip-vertical-right'>
-          <img className='absolute h-[100px] ' src={good} alt="Not Found"/> 
- 
           </div>
         <div className='flex items-end h-full'>
         <h1 className='font-bold'>Choose Your <br /> Favourite Flavor!</h1>
@@ -75,7 +75,7 @@ const Home = () => {
        </div>
       </div>
 
-       <div id='ScrollMenu' className='w-full'>
+       <div id='ScrollMenu' className='w-full' >
          <div className='flex w-full h-[350px]'>
          
           <div className='overflow-hidden w-1/3'>
@@ -106,19 +106,17 @@ const Home = () => {
        </div>
                  {/* Slider part */}
 
-       <div className='flex flex-col items-center justify-around h-[500px]'>
+       <div className='flex flex-col items-center h-full'>
       
          <div className='flex justify-center items-start font-serif text-[50px] font-bold'>
             <h1>Best Ice Cream Shops</h1>
          </div>
-          <div className='h-[300px] flex items-center justify-center'>
-           <Baz/>
+         <CardSlider/>
          </div>
 
+        <Footer/>
        </div>
-       
 
-   </div>
       )
 }
 
