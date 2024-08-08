@@ -343,7 +343,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <div className="z-20 fixed w-full bg-white border-gray-200 dark:bg-gray-900 px-10 h-[100px]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <NavLink to="" id="Menu" className="text-[20px]">
@@ -410,7 +410,7 @@ const Navbar = () => {
                 {productVisible && ProductMenu()}
               </NavLink>
 
-              <NavLink to=""
+              <NavLink to="blog"
                 onMouseEnter={bloghandleMouseEnter}
                 onMouseLeave={bloghandleMouseLeave}
                 className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"

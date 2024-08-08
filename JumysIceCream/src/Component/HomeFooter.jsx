@@ -2,7 +2,7 @@ import React from 'react';
 import Footerlogo from "../assets/logo-white.svg";
 import { FaBehance, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
-function HomeFooter() {
+function HomeFooter () {
   return (
     
     <footer className="bg-black text-white h-[400px] ">
