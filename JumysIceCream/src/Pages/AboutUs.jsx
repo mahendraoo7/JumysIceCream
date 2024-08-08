@@ -1,6 +1,6 @@
 import React from 'react'
 import bg from '../assets/asset 50.jpeg'
-import HomeFooter from '../Component/HomeFooter';
+import Footer from '../Component/Footer';
 import { ArrowBigRight, ArrowRight } from 'lucide-react';
 import ice from '../assets/assets64.jpg';
 import ice2 from '../assets/assets65.jpg';
@@ -84,7 +84,7 @@ function AboutUs() {
     </div>
     <Test/>
     <ArticleCard/>
-    <HomeFooter/>
+    <Footer/>
      
 
 

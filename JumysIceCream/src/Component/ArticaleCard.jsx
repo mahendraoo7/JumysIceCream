@@ -58,7 +58,7 @@ const ArticleCard = () => {
     .concat(articles.slice(0, Math.max(0, currentIndex + 3 - articles.length)));
 
   return (
-    <div className="py-20">
+    <div className="py-10">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-[30px] text-red-500">Our News </h1>
         <h1 className="text-[40px] font-bold">Testiest Updates</h1>

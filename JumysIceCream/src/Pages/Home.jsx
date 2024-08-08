@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from './Footer'
+import HomeFooter from '../Component/HomeFooter'
 import bg from '../assets/bg.jpg'
 import Ice from '../assets/asset 5.png'
 import good from '../assets/asset 6.png'
@@ -9,7 +9,11 @@ import cup from '../assets/asset 16.png'
 import img1 from '../assets/asset 17.jpeg'
 import img2 from '../assets/asset 18.jpeg'
 import img3 from '../assets/asset 19.jpeg'
-import CardSlider from './CardSlider'
+import CardSlider from '../Component/CardSlider'
+import PageHome from '../Component/PageHome'
+import IceSlider from '../Component/IceSlider'
+import ArticleCard from '../Component/ArticaleCard'
+
 
 const Home = () => {
   return (
@@ -106,15 +110,29 @@ const Home = () => {
        </div>
                  {/* Slider part */}
 
-       <div className='flex flex-col items-center h-full'>
+       <div className='flex flex-col items-center h-full py-10'>
       
-         <div className='flex justify-center items-start font-serif text-[50px] font-bold'>
-            <h1>Best Ice Cream Shops</h1>
+         <div className='flex justify-center items-center'>
+            <h1 className='font-serif text-[50px] font-bold'>Best Ice Cream Shops</h1>
          </div>
+         <div className='h-full'>
          <CardSlider/>
          </div>
+         </div>
 
-        <Footer/>
+         <div className='py-10'>
+          <PageHome/>
+         </div>
+         <div className=''>
+          <IceSlider/>
+         </div>
+
+
+         <div className=''>
+          <ArticleCard/>
+         </div>
+
+        <HomeFooter/>
        </div>
 
       )

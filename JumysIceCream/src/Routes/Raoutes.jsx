@@ -1,4 +1,4 @@
-import Home from '../Component/Home'
+import Home from '../Pages/Home'
 import Shop from '../Pages/Shop'
 import Product from '../Pages/Product'
 import Blog from '../Pages/Blog'

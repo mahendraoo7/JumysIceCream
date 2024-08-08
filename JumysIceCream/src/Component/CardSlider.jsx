@@ -159,9 +159,9 @@ const CardSlider = () => {
     };
 
     return (
-        <div className=" w-screen">
-            <div className="absolute z-10 h-full flex items-center ">
-            <Button onClick={prevSlide} className="z-10 w-10 h-10 bg-white items-center justify-center rounded-full flex ml-5"><FaLessThan className="w-5 h-5"/></Button>
+        <div className="py-10 w-screen">
+            <div className="absolute z-10 flex w-full h-full items-center ">
+            <Button onClick={prevSlide} className=" z-10 w-10 h-10 bg-white items-center justify-center rounded-full flex ml-5"><FaLessThan className="w-5 h-5"/></Button>
             </div>
             <div className="absolute z-10 flex w-full h-full justify-end items-center">
             <Button onClick={nextSlide} className=" w-10 h-10 bg-white rounded-full border-none flex justify-center items-center"><FaGreaterThan  className="w-5 h-5"/></Button>
