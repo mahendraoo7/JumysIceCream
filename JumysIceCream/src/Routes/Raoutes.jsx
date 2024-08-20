@@ -8,6 +8,7 @@ import Navbar from '../Component/Navbar'
 import Faq2 from '../Pages/Faq-2'
 import Page404 from '../Pages/page404'
 import AboutUs from '../Pages/AboutUs'
+import Contact from '../Pages/Contact'
 
 const RouterPlat = createBrowserRouter([
     {
@@ -49,6 +50,10 @@ const RouterPlat = createBrowserRouter([
             {
                 path:"about",
                 element:<AboutUs/>
+            },
+            {
+                path:"contact",
+                element:<Contact/>
             }
 
         ]

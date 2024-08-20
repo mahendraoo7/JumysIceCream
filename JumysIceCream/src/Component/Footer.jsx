@@ -15,7 +15,7 @@ function Footer() {
       bgColor="black"
       className="text-lg-start text-muted h-[400px] "
     >
-      <section className="pb-5 text-white ">
+      <section className="pb-5 text-white flex justify-center">
 
         <MDBContainer className=" ">
 
@@ -73,8 +73,8 @@ function Footer() {
           </MDBRow>
         </MDBContainer>
       </section>
-      <div className="border border-[#fbfafa] opacity-15"></div>
-      <div className=" md:mt-0 flex justify-between h-[110px] items-end px-3">
+      <div className="border border-[#fbfafa] opacity-15 justify-center"></div>
+      <div className=" md:mt-0 flex justify-center gap-80 h-[110px] items-end px-3 ">
         <div className="flex left-0 space-x-5 items-end ">
           <div className="">
             <p className=" text-base text-white sm:text-left ">

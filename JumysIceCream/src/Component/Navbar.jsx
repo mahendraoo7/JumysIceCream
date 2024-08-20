@@ -281,7 +281,7 @@ const Navbar = () => {
           <div className="absolute bg-gray-50 text-gray-500 flex justify-around w-[150px] h-[220px]">
           <div className="mt-5 grid">
            <NavLink to="about" className="hover:text-red-500">About Us</NavLink>
-           <NavLink to="" className="hover:text-red-500">Contact</NavLink>
+           <NavLink to="contact" className="hover:text-red-500">Contact</NavLink>
            <NavLink to="" className="hover:text-red-500">Faq</NavLink>
            <NavLink to="Faq2" className="hover:text-red-500">Faq2</NavLink>
            <NavLink to="page404" className="hover:text-red-500">Page 404</NavLink>
@@ -349,7 +349,7 @@ const Navbar = () => {
           <NavLink to="" id="Menu" className="text-[20px]">
             <i class="fa-solid fa-bars"></i>
           </NavLink>
-          <NavLink to="" className="rtl:space-x-reverse">
+          <NavLink to="home" className="rtl:space-x-reverse">
             <img
               id="logo"
               className=" size-16 md:size-24 "
