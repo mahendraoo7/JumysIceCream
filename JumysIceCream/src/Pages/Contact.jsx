@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiLogoBehance } from "react-icons/bi";
 import Footer from "../Component/Footer";
 import HomeFooter from "../Component/HomeFooter";
-// import ScrollToTopButton from "../Components/TopButton";
+import Top from "../Component/Top";
 
 function Contact() {
   return (
@@ -135,7 +135,7 @@ function Contact() {
 <br />
 
 <Footer/>
-{/* <ScrollToTopButton/> */}
+<Top/>
     </div>
   );
 }

@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ShopList from './ShopList';
+// import bg from '../asset 50.jpeg'
 
-const Shop = () => {
+function Shop() {
+  
   return (
-    <div>
-        shop
+    <div className=''>
+<ShopList/>
     </div>
-  )
+  );
 }
 
-export default Shop
+export default Shop;

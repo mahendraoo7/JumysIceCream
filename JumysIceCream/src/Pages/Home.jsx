@@ -13,6 +13,7 @@ import CardSlider from '../Component/CardSlider'
 import PageHome from '../Component/PageHome'
 import IceSlider from '../Component/IceSlider'
 import ArticleCard from '../Component/ArticaleCard'
+import Top from '../Component/Top'
 
 
 const Home = () => {
@@ -133,6 +134,8 @@ const Home = () => {
          </div>
 
         <HomeFooter/>
+        <Top/>
+
        </div>
 
       )

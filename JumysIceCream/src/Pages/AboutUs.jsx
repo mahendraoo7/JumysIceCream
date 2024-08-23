@@ -6,6 +6,7 @@ import ice from '../assets/assets64.jpg';
 import ice2 from '../assets/assets65.jpg';
 import Test from '../Component/Test';
 import ArticleCard from '../Component/ArticaleCard';
+import Top from '../Component/Top';
 
 
 const stats = [
@@ -85,6 +86,7 @@ function AboutUs() {
     <Test/>
     <ArticleCard/>
     <Footer/>
+    <Top/>
      
 
 

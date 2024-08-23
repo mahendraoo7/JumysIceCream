@@ -6,6 +6,7 @@ import img2 from '../assets/asset 2.jpeg'
 import img3 from '../assets/asset 3.jpeg'
 import img4 from '../assets/asset 47.jpeg'
 import Footer from '../Component/Footer'
+import Top from '../Component/Top'
 
 const Blog = (props) => {
   return (
@@ -26,6 +27,7 @@ const Blog = (props) => {
        <BlogCard img= {img4} text = "Ice Cream Treand That Drive More Sales"/>     
         </div>
     <Footer/>
+    <Top/>
     </>
 
   )

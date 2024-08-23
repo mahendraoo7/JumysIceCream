@@ -7,6 +7,7 @@ import navImg2 from '../assets/asset 2.jpeg'
 import navImg3 from '../assets/asset 3.jpeg'
 
 const Navbar = () => {
+
   const [HomeVisible, setHomeVisible] = useState(false);
 
   const [shopVisible, setShopVisible] = useState(false);
@@ -391,7 +392,7 @@ const Navbar = () => {
                 {HomeVisible && HomeMenu()}
               </NavLink>
 
-              <NavLink to=""
+              <NavLink to="shop"
                 onMouseEnter={shophandleMouseEnter}
                 onMouseLeave={shophandleMouseLeave}
                 className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
@@ -434,7 +435,7 @@ const Navbar = () => {
 
 
      <div className='w-full h-[60px] fixed bottom-0 flex justify-around bg-white z-20' id='Mobile'>
-      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-table-cells"></i>Shop</NavLink>
+      <NavLink to="shop" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-table-cells"></i>Shop</NavLink>
       <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-user"></i> Account</NavLink>
       <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-magnifying-glass"></i> Search</NavLink>
       <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-heart"></i> Wishlist</NavLink>
