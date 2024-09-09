@@ -31,8 +31,9 @@ function Contact() {
           </div>
         </div>
       </div>
-
-<Map/>
+    <div className="w-screen">
+        <Map/>
+    </div>
 
 {/* Get Informations */}
 <div className=" flex w-screen justify-around items-center">
