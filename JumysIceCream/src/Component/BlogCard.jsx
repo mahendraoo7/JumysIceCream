@@ -1,27 +1,36 @@
-import React from 'react'
+import React from 'react';
 
 const BlogCard = (props) => {
   return (
-    <>
-      <div className='w-1/4 '>
-      <div className='w-screen '>
-      <div className='z-10 absolute flex w-[360px] justify-end h-[340px] items-end '>
-      <a href="" className='bg-white flex font-semibold justify-center items-center h-[35px] w-[130px] text-center rounded-3xl hover:bg-red-600 hover:text-white'>Business Tips </a>
-      </div>
-      <div className='h-[350px] w-[370px] flex '>
-      <img className='object-cover' src={props.img} alt="not found" />
-      </div>
+    <div className='w-full max-w-md mx-auto p-4 relative bg-white rounded-lg shadow-lg'>
+      {/* Image and overlay button */}
+      <div className='relative'>
+        <img
+          className='w-full h-48 object-cover rounded-t-lg'
+          src={props.img}
+          alt="Blog"
+        />
+        <div className='absolute top-4 right-4'>
+          <a
+            href="#"
+            className='bg-white flex font-semibold justify-center items-center h-10 px-4 text-center rounded-full hover:bg-red-600 hover:text-white'
+          >
+            Business Tips
+          </a>
+        </div>
       </div>
 
-      <div className='w-[300px] drop-shadow-2xl flex flex-col gap-3'>
-        <p className='text-[17px] '>June 20,2024</p>
-        <p className='text-[25px] font-bold'>{props.text}</p>
-        <p className='text-[17px] text-gray-500'>{props.distext}</p>
-        <button className='bg-black text-white w-32 h-11 rounded-full'>Read More</button>
+      {/* Content */}
+      <div className='p-4'>
+        <p className='text-xs text-gray-600 md:text-sm'>{props.date || 'June 20, 2024'}</p>
+        <p className='text-lg font-bold mt-2'>{props.text}</p>
+        <p className='text-sm text-gray-500 mt-2 md:text-base'>{props.distext}</p>
+        <button className='bg-black text-white mt-4 py-2 px-4 rounded-full text-sm hover:bg-gray-800 md:text-base'>
+          Read More
+        </button>
       </div>
-      </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default BlogCard
+export default BlogCard;

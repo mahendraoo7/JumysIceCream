@@ -1,12 +1,6 @@
 import React from "react";
 import { BiLogoBehance } from "react-icons/bi";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-} from "mdb-react-ui-kit";
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdb-react-ui-kit";
 import { FaArrowRight, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
@@ -14,9 +8,9 @@ function Footer() {
     <MDBFooter bgColor="black" className="text-lg-start text-muted">
       <section className="pb-5 text-white">
         <MDBContainer className="px-4 sm:px-6 lg:px-8 pt-14">
-          <MDBRow className="flex flex-col md:flex-row justify-around">
+          <MDBRow className="flex flex-col md:flex-row justify-between md:justify-around gap-20">
             <MDBCol md="6" lg="3" className="py-7 mb-4 ">
-              <h6 className="text-white font-serif text-xl md:text-2xl lg:text-3xl fw-bold mb-4">
+              <h6 className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-bold mb-4">
                 <MDBIcon icon="gem" className="me-2" />
                 Our Newsletter
               </h6>
@@ -32,12 +26,12 @@ function Footer() {
                   className="bg-black text-white placeholder-gray-400 h-10 w-full md:w-3/4 px-3 focus:outline-none"
                 />
               </div>
-              <div className="bg-[#e10914] hover:bg-gray-700 text-white flex justify-center items-center text-xl w-12 h-12 rounded-full cursor-pointer transition duration-300">
+              <div className="bg-[#e10914] hover:bg-red-700 text-white flex justify-center items-center text-xl w-12 h-12 rounded-full cursor-pointer transition duration-300">
                 <FaArrowRight />
               </div>
             </MDBCol>
-
-            <MDBCol md="3" lg="2" className="mb-4">
+            <div className="flex space-x-10">
+            <MDBCol md="3" lg="2" className="mb-4 ">
               <h6 className="text-xl md:text-2xl lg:text-3xl py-5">Information</h6>
               <ul className="list-disc space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-red-600">Help Center</a></li>
@@ -60,16 +54,16 @@ function Footer() {
             </MDBCol>
 
             <MDBCol md="6" lg="3">
-              <h6 className="text-xl md:text-2xl lg:text-3xl py-5">About Us</h6>
+              <h6 className="text-xl md:text-2xl lg:text-3xl py-5 w-32 ">About Us</h6>
               <ul className="list-disc space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-red-600
-                                ">Our Story</a></li>
+                <li><a href="#" className="hover:text-red-600">Our Story</a></li>
                 <li><a href="#" className="hover:text-red-600">Contact</a></li>
                 <li><a href="#" className="hover:text-red-600">Affiliate Program</a></li>
                 <li><a href="#" className="hover:text-red-600">Referral Program</a></li>
                 <li><a href="#" className="hover:text-red-600">Careers</a></li>
               </ul>
             </MDBCol>
+            </div>
           </MDBRow>
         </MDBContainer>
       </section>
