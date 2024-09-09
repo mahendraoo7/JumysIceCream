@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import assent1 from "../assets/asset 1.jpeg";
 import assent2 from "../assets/asset 2.jpeg";
 import assent3 from "../assets/asset 3.jpeg";
@@ -28,7 +28,7 @@ const ArticleCard = () => {
     },
     {
       image: assent45,
-      title: "Post Format Video Blogs Dessert Recipes ",
+      title: "Post Format Video Blogs Dessert Recipes",
       date: "February 8, 2024",
     },
     {
@@ -58,33 +58,32 @@ const ArticleCard = () => {
     .concat(articles.slice(0, Math.max(0, currentIndex + 3 - articles.length)));
 
   return (
-    <div className="py-10">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-[30px] text-red-500">Our News </h1>
-        <h1 className="text-[40px] font-bold">Testiest Updates</h1>
+    <div className="py-10 px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-red-500 mb-2">Our News</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Testiest Updates</h1>
       </div>
-      <div className="flex items-center justify-around w-screen py-7 ">
+      <div className="flex items-center justify-between mb-6">
         <button
-          className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full h-10 shadow text-gray-950 hover:text-gray-100"
+          className="bg-white hover:bg-red-500 rounded-full p-2 shadow text-gray-950 hover:text-white"
           onClick={handlePrev}
         >
-          <FaArrowLeft />
+          <FaArrowLeft size={24} />
         </button>
-        <div className="flex justify-center items-center w-screen gap-5">
+        <div className="flex flex-wrap gap-4 justify-center flex-grow">
           {visibleArticles.map((article, index) => (
-            <div key={index} className="">
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
               <img
-                className="object-cover homeIcecreem overflow-hidden"
+                className="w-full h-auto object-cover rounded-lg"
                 src={article.image}
                 alt={article.title}
               />
-
-              <div className="py-4 ">
-                <div className="text-gray-500 text-sm font-medium">
-                  BUSINESS TIPS <span className="text-[#ff0000] mx-2">•</span>
-                  <span className="text-[#ff0000] mx-2">{article.date}</span>
+              <div className="py-4 px-2">
+                <div className="text-gray-500 text-xs sm:text-sm font-medium">
+                  BUSINESS TIPS <span className="text-red-500 mx-2">•</span>
+                  <span className="text-red-500 mx-2">{article.date}</span>
                 </div>
-                <h2 className="text-xl   font-semibold text-[#000] hover:text-[#ff0000]">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-black hover:text-red-500">
                   {article.title}
                 </h2>
               </div>
@@ -92,15 +91,15 @@ const ArticleCard = () => {
           ))}
         </div>
         <button
-          className="bg-[#ffffff] hover:bg-[#ff0000] rounded-full  shadow text-gray-950 hover:text-gray-100"
+          className="bg-white hover:bg-red-500 rounded-full p-2 shadow text-gray-950 hover:text-white"
           onClick={handleNext}
         >
-          <FaArrowRight />
+          <FaArrowRight size={24} />
         </button>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="text-center">
         <NavLink to="">
-          <button className="h-[40px] w-[150px] bg-red-600 text-white font-bold rounded-full">
+          <button className="px-6 py-2 bg-red-600 text-white font-bold rounded-full text-sm sm:text-base">
             Read More
           </button>
         </NavLink>

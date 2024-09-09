@@ -18,6 +18,8 @@ const Navbar = () => {
 
   const [pageVisible, setPageVisible] = useState(false);
 
+  const [SideMenuVisible, setSideMenuVisible] = useState(false);
+
   const HomeMenu = () => {
     return (
       <div className="">
@@ -278,8 +280,8 @@ const Navbar = () => {
   const PageMenu = () => {
     return (
       <div className="">
-        <ul>
-          <div className="absolute bg-gray-50 text-gray-500 flex justify-around w-[150px] h-[220px]">
+        <ul className="flex justify-center">
+          <div className="absolute bg-gray-50 text-gray-500 flex justify-center w-[150px] h-[220px]">
           <div className="mt-5 grid">
            <NavLink to="about" className="hover:text-red-500">About Us</NavLink>
            <NavLink to="contact" className="hover:text-red-500">Contact</NavLink>
@@ -342,14 +344,25 @@ const Navbar = () => {
   const pagehandleMouseLeave = () => {
     setPageVisible(false);
   };
+  const SideMenuhandleMouseEnter = () => {
+    setSideMenuVisible(true);
+  };
+  const SideMenuhandleMouseLeave = () => {
+    setSideMenuVisible(false);
+  };
 
   return (
     <div className="overflow-hidden">
       <div className="z-20 fixed w-full bg-white border-gray-200 dark:bg-gray-900 px-10 h-[100px]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-          <NavLink to="" id="Menu" className="text-[20px]">
+
+          <NavLink to="Menu" id="Menu" className="text-[20px] "
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave} >
             <i class="fa-solid fa-bars"></i>
+            {SideMenuVisible && SideMenu()}
           </NavLink>
+
           <NavLink to="home" className="rtl:space-x-reverse">
             <img
               id="logo"
@@ -402,7 +415,7 @@ const Navbar = () => {
                   {shopVisible && ShopMenu()}
               </NavLink>
 
-              <NavLink to=""
+              <NavLink to="product"
                 onMouseEnter={producthandleMouseEnter}
                 onMouseLeave={producthandleMouseLeave}
                 className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"

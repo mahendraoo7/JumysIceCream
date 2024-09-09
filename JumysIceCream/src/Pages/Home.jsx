@@ -18,67 +18,76 @@ import Top from '../Component/Top'
 
 const Home = () => {
   return (
-    <div className='m-0 p-0'>
-    <div className = "h-screen w-screen bg-cover flex justify-end gap-20 items-center bg-no-repeat slide-in-elliptic-top-fwd" style={{backgroundImage: `url(${bg})`}}>
-     <div></div>
-      <div className='flex flex-col h-full justify-center roll-in-left'>
-        <h1 className='font-bold'>SUNDAES AND SMILES</h1>
-        <h1 className='font-bold text-[35px] '>Frosty Delight <br />Treat YourSelf TO <br /> Creamy</h1>
-        <div className='flex gap-3'>
-        <button className='bg-red-600 rounded-xl h-[30px] w-[90px] text-white font-bold text-[12px] hover:bg-black' >Shop Now</button>
-        <button className='bg-black rounded-xl h-[30px] w-[90px] text-white font-bold text-[12px] hover:bg-red-600' >See More</button>
-        </div>
-      </div>
+    <div className='m-0 p-0 mx-auto '>
+   <div className="w-screen h-auto bg-cover bg-no-repeat flex flex-col sm:flex-row gap-10 justify-center" style={{ backgroundImage: `url(${bg})` }}>
+  <div className="flex-1 hidden md:block">
+    {/* Optional content for larger screens */}
+  </div>
 
-          
-       <div className='flex h-full items-center roll-in-right'>
-          <div className='absolute flex items-end h-[350px] justify-center'>
-          <img className='animate-spin size-24' src={dis} alt="Not Found"/> 
-          <h1 className='absolute h-[80px] flex font-bold text-white '>Get<br/>30%<br/>Off</h1>
-          </div>
-          <div className='flex h-full items-end'>
-          <img className='h-[400px] w-[300px]' src={Ice} alt="Not Found"/>    
-         </div>
-          <div className='h-full flex justify-center items-center flip-vertical-right'>
-          <img className=' h-[100px]' src={good} alt="Not Found"/> 
-        </div>
-          </div>
-        <div className='flex items-end h-full'>
-        <h1 className='font-bold'>Choose Your <br /> Favourite Flavor!</h1>
-        <img className='h-[200px]' src={flower} alt="Not Found" />
-        </div>
-   </div>
+  <div className="flex flex-col items-center justify-center text-center px-4 sm:px-0 sm:items-start sm:text-left flex-1">
+    <h1 className="font-bold text-[24px] sm:text-[30px] lg:text-[35px] mb-2">SUNDAES AND SMILES</h1>
+    <h2 className="font-bold text-[20px] sm:text-[30px] lg:text-[35px] mb-4">Frosty Delight Treat YourSelf TO Creamy</h2>
+    <div className="flex gap-2 sm:gap-4">
+      <button className="bg-red-600 rounded-xl h-[30px] w-[80px] sm:w-[100px] text-white font-bold text-[12px] sm:text-[14px] hover:bg-black">Shop Now</button>
+      <button className="bg-black rounded-xl h-[30px] w-[80px] sm:w-[100px] text-white font-bold text-[12px] sm:text-[14px] hover:bg-red-600">See More</button>
+    </div>
+  </div>
+
+  <div className="flex-1 flex items-center justify-center relative">
+    <img className="absolute animate-spin w-[120px] h-[120px]" src={dis} alt="Discount Icon" />
+    <h1 className="absolute text-white font-bold text-[24px] md:text-[20px] lg:text-[20px]">Get<br />30%<br />Off</h1>
+    <img className="w-full h-auto" src={Ice} alt="Ice Cream" />
+    <div className="absolute bottom-0 right-0 p-4">
+      <img className=" absolute bottom-60 size-28  flip-vertical-right" src={good} alt="Good" />
+    </div>
+  </div>
+
+  <div className="hidden md:flex flex-col items-end p-4">
+    <h1 className="font-bold text-[20px] md:text-[30px] lg:text-[35px] mb-2">Choose Your <br /> Favourite Flavor!</h1>
+    <img className="h-[150px] md:h-[200px]" src={flower} alt="Flower" />
+  </div>
+</div>
+
     
-      <div className='flex gap-20 justify-around items-center h-[500px]'>
-      <div>
-       <div className='flex items-center w-[400px]'>
-            <div className='text-red-600 font-bold font-serif text-[50px]'>
-              <h1 className=''>Best <br /> Ice <br /> Cream <br /> Shops</h1>
-            </div>
-            <div>
-              <p className='font-medium'>it's Quite Possible That We Are Living In The Golden Age Of Ice Cream Innovation. Old School Creameris Are Churing out Vannila Bean maasterPrice Honed Over Generation While New Shops Are Tossing The Term "Chef" </p>
-              <a href='' className='underline hover:text-red-600'>Read More </a>
-            </div>
-            </div>
-            <h1 className='text-[30px] font-medium text-red-600'>----------------------------------</h1>
-       </div>
-
-       <div>
-       <div className='flex items-center justify-center w-[450px] '>
-        <div className=' text-red-600 font-bold font-serif text-[50px]'>
-              <h1 className=''>Wave <br /> Artisan <br /> Shops</h1>
-            </div>
-            <div className=''>
-              <p className='font-medium'>These Ice Cream Shops Represent Everything That Is Well And Good: New-Wave Artisan Shops Challenging The Very Notion Of What Should Be Placed On A Cone (Or Stick, Or Between Cookies), Old-School Parlors Learning… </p>
-              <a href='' className='underline hover:text-red-600'>Read More</a>
-              <div className='flex justify-end items-end w-[230px]'>
-              <img className='' src={cup} alt="Not Found" />
-              </div>
-            </div>
-            </div>
-              <h1 className='text-[30px] font-medium text-red-600'>-----------------------------------</h1>
-       </div>
+<div className='flex flex-col lg:flex-row gap-10 lg:gap-20 justify-center items-center md:w-screen py-10'>
+  <div className='lg:w-1/2'>
+    <div className='flex flex-col lg:flex-row items-center lg:items-start py-2'>
+      <div className='text-red-600 font-bold font-serif text-[40px] lg:text-[50px] mb-4 lg:mb-0'>
+        <h1>Best Ice Cream Shops</h1>
       </div>
+      <div className='lg:ml-10'>
+        <p className='font-medium text-sm lg:text-base'>
+          It's quite possible that we are living in the golden age of ice cream innovation. Old school creameries are churning out vanilla bean masterpieces honed over generations, while new shops are tossing the term "chef".
+        </p>
+        <a href='#' className='underline hover:text-red-600 font-medium text-sm lg:text-base'>Read More</a>
+      </div>
+    </div>
+    <h1 className='text-[20px] lg:text-[30px] font-medium text-red-600 mt-4 lg:mt-10'>
+      {Array.from({ length: 50 }, (_, i) => '-').join('')}
+    </h1>
+  </div>
+
+  <div className='lg:w-1/2'>
+    <div className='flex flex-col lg:flex-row items-center lg:items-start'>
+      <div className='text-red-600 font-bold font-serif text-[40px] lg:text-[50px] mb-4 lg:mb-0'>
+        <h1>Wave Artisan Shops</h1>
+      </div>
+      <div className='lg:ml-10'>
+        <p className='font-medium text-sm lg:text-base'>
+          These ice cream shops represent everything that is well and good: new-wave artisan shops challenging the very notion of what should be placed on a cone (or stick, or between cookies), old-school parlors learning…
+        </p>
+        <a href='#' className='underline hover:text-red-600 font-medium text-sm lg:text-base'>Read More</a>
+        <div className='flex justify-center lg:justify-end items-end mt-4 lg:mt-0'>
+          <img className='w-[150px] lg:w-[230px]' src={cup} alt="Cup of Ice Cream" />
+        </div>
+      </div>
+    </div>
+    <h1 className='text-[20px] lg:text-[30px] font-medium text-red-600 mt-4 lg:mt-10'>
+      {Array.from({ length: 50 }, (_, i) => '-').join('')}
+    </h1>
+  </div>
+</div>
+
 
        <div id='ScrollMenu' className='w-full' >
          <div className='flex w-full h-[350px]'>
@@ -116,18 +125,18 @@ const Home = () => {
          <div className='flex justify-center items-center'>
             <h1 className='font-serif text-[50px] font-bold'>Best Ice Cream Shops</h1>
          </div>
-         <div className='h-full'>
-         <CardSlider/>
-         </div>
+          <div className='h-full'>
+          <CardSlider/>
+          </div>
          </div>
 
          <div className='py-10'>
           <PageHome/>
          </div>
+
          <div className=''>
           <IceSlider/>
          </div>
-
 
          <div className=''>
           <ArticleCard/>

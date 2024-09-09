@@ -9,6 +9,7 @@ import Faq2 from '../Pages/Faq-2'
 import Page404 from '../Pages/page404'
 import AboutUs from '../Pages/AboutUs'
 import Contact from '../Pages/Contact'
+import SignIn from '../Pages/SingIn'
 
 const RouterPlat = createBrowserRouter([
     {
@@ -40,21 +41,27 @@ const RouterPlat = createBrowserRouter([
                 element:<Page404/>
             },
             {
-                path:"page",
+                path:"/page",
                 element:<Page/>
             },
             {
-                path:"page404",
+                path:"/page404",
                 element:<Page404/>
             },
             {
-                path:"about",
+                path:"/about",
                 element:<AboutUs/>
             },
             {
-                path:"contact",
+                path:"/contact",
                 element:<Contact/>
+            },
+            {
+                path:"/account",
+                element:<SignIn/>
             }
+            
+            
 
         ]
     }

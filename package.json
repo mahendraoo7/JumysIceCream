@@ -3,6 +3,7 @@
     "@fseehawer/react-circular-slider": "^2.7.0",
     "fa-react-icon": "^1.2.0",
     "lucide-react": "^0.424.0",
+    "react-countup": "^6.5.3",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
   }

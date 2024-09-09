@@ -13,7 +13,7 @@ const ProductCardProductList = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    setIsHovered(true); 
   };
 
   const handleMouseLeave = () => {
@@ -30,9 +30,9 @@ const ProductCardProductList = () => {
         <img
           src={isHovered ? assets66 : assets67}
           alt="Product"
-          className="w-64 h-64 object-cover transition duration-300"
+          className="h-64 w-64 object-cover transition duration-300"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300">
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition duration-600">
           <FaSearch className="text-white text-3xl" />
         </div>
       </div>

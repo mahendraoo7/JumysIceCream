@@ -53,7 +53,7 @@ const CategoryItem = ({ category, isOpen, toggleOpen }) => (
         </label>
       </div>
       {category.subcategories.length > 0 && (
-        <button onClick={toggleOpen}>
+        <button onClick={toggleOpen} className="text-gray-700 hover:text-gray-900">
           {isOpen ? '-' : '+'}
         </button>
       )}
@@ -95,7 +95,7 @@ const FilterComponent = () => {
   ];
 
   return (
-    <div className="p-4 rounded-lg w-96">
+    <div className="p-4 rounded-lg w-full max-w-md mx-auto">
       {/* Categories Section */}
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Categories</h3>
@@ -119,18 +119,16 @@ const FilterComponent = () => {
       </div>
 
       {/* Color Section */}
-      <div className="mb-4 flex flex-col">
+      <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Color</h3>
-        <ul className="flex flex-wrap flex-col">
+        <ul className="flex flex-wrap gap-2">
           {colors.map((color, index) => (
-            <li key={index} className="flex items-center mr-2 mb-2">
+            <li key={index} className="flex items-center">
               <span
-                className="block w-7 h-7 rounded-full mr-2 border border-gray-400 hover:border-gray-950"
+                className="block w-7 h-7 rounded-full border border-gray-400 hover:border-gray-950"
                 style={{ backgroundColor: color.hex }}
               ></span>
-              <span>
-                {color.name} ({color.count})
-              </span>
+              <span className="ml-2 text-sm">{color.name} ({color.count})</span>
             </li>
           ))}
         </ul>
@@ -143,7 +141,7 @@ const FilterComponent = () => {
           {["L", "M", "S", "XS"].map((size, index) => (
             <li key={index} className="flex items-center mb-1">
               <input type="checkbox" id={size} className="mr-2" />
-              <label htmlFor={size} className="text-gray-700">
+              <label htmlFor={size} className="text-gray-700 text-sm">
                 {size}
               </label>
             </li>
@@ -179,13 +177,13 @@ const FilterComponent = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-16 h-16 object-cover mr-2"
+                className="w-16 h-16 object-cover mr-2 rounded-md"
               />
               <div className="flex flex-col">
-                <div className="text-gray-600 hover:text-[#ff0000] cursor-pointer duration-500">
+                <div className="text-gray-600 hover:text-[#ff0000] cursor-pointer duration-500 text-sm">
                   {product.name}
                 </div>
-                <div className="flex gap-x-5">
+                <div className="flex gap-x-2 text-sm">
                   <div className="text-gray-500">
                     <del>{product.sleshPrice}</del>
                   </div>
