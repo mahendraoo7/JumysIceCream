@@ -67,7 +67,6 @@ const RouterPlat = createBrowserRouter([
     }
 ])
 
-
 const Raoutes = () => {
   return (
     <div>

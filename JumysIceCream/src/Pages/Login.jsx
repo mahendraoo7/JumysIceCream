@@ -6,6 +6,10 @@ import Footer from '../Components/Footer';
 
 
 const Login = () => {
+
+  const { loginWithRedirect } = useAuth0();
+
+
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -35,7 +39,6 @@ const Login = () => {
         </div>
       </div>
 
-{/* Login Forms */}
 <div className="flex justify-center gap-x-5 w-full p-10  mt-10">
 
       {/* Login */}
@@ -118,7 +121,7 @@ const Login = () => {
           <div className="flex items-center justify-center">
             <button
               className="w-full px-4 py-2 font-bold text-white bg-[#000] rounded-full hover:bg-[#ff0000] duration-700 focus:outline-none focus:shadow-outline"
-              type="button"
+              type="button" onClick={() => loginWithRedirect()}
             >
               LOGIN
             </button>

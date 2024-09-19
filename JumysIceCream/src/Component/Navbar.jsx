@@ -41,7 +41,7 @@ const Navbar = () => {
               <li className="">Home 5</li>
             </NavLink>
             <NavLink to="" className="hover:text-red-500">
-              <li className="">Home 6</li>
+              <li className="">Home 6 </li>
             </NavLink>
             <NavLink to="" className="hover:text-red-500">
               <li className="">Home 7</li>
