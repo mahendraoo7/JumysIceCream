@@ -127,7 +127,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="title-block text-center font-Kalnia font-semibold text-[45px] text-[#000] mb-5">
+      <div classname="title-block text-center font-Kalnia font-semibold text-[45px] text-[#000] mb-5">
         <h2>Best Ice Cream Shops</h2>
       </div>
       <HomeProductCardMid />

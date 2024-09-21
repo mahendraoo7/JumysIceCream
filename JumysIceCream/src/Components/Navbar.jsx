@@ -409,7 +409,7 @@ const Navbar = () => {
               </NavLink>
 
 
-          
+      
               <NavLink to="product"
                 onMouseEnter={producthandleMouseEnter}
                 onMouseLeave={producthandleMouseLeave}
