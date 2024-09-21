@@ -1,10 +1,12 @@
 import React from 'react'
+import Error404 from './Error404'
 
-const Page = () => {
+function Page() {
   return (
     <div>
-         page
+      <Error404/>
     </div>
   )
 }
+
 export default Page

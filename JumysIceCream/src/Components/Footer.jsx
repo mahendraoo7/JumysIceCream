@@ -1,7 +1,6 @@
 import React from 'react';
-import Footerlogo from "../assets/asset 0.svg";
 import { FaBeer, FaFacebook, FaInstagram, FaUser, FaYoutube } from 'react-icons/fa';
-import Img from '../assets/asset 48.svg';
+import Img from '../assets/asset48.svg';
 
 function Footer() {
   return (
@@ -15,14 +14,14 @@ function Footer() {
           <p className="text-sm md:text-base lg:text-lg text-gray-400">
             Be the first to know about new flavors and more
           </p>
-          <div className="mt-6 flex flex-col md:flex-row items-center gap-4">
+          <div className="mt-6 flex flex-col md:flex-row justify-center items-center gap-4">
             <input
               type="text"
               className="w-full md:w-80 p-3 border border-gray-600 rounded-lg bg-gray-800 placeholder-gray-400"
               placeholder="Your Email..."
             />
             <button
-              className="mt-4 md:mt-0 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition duration-300"
+              className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-lg transition duration-300"
               type="submit"
             >
               Subscribe
@@ -31,7 +30,7 @@ function Footer() {
         </div>
 
         {/* Divider Line */}
-        <div className='w-full h-px bg-gray-800 opacity-80 mb-8'></div>
+        <div className='w-full h-px bg-gray-300 opacity-80 mb-8'></div>
 
         {/* Footer Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">

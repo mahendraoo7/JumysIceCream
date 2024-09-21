@@ -1,187 +1,687 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 .underline-animate {
-    position: relative;
+  position: relative;
+}
+
+.underline-animate::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  transition:0.3s;
+}
+
+
+.underline-animate:hover::after {
+  width: 100%;
+}
+
+.active{
+   color: red ;
+
+}
+
+
+
+
+
+
+
+
+
+@layer components{
+  .heading{
+    @apply text-center py-4 bg-purple-700 text-4xl font-semibold text-white
   }
-  
-  .underline-animate::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 1px;
-    background-color: red;
-    transition:0.3s;
-  }
-
-  
-  .underline-animate:hover::after {
-    width: 100%;
-  }
-  
-  .active{
-     color: red ;
-
-  }
-
-  @media only screen and (max-width: 1199px) {
-    #icon{
-         
-    display: none;
-
-    }
-    #navbar{
-         
-    display:none;
-
-    }
-    #button {
-      display: none;
-    }
-  }
-
-  @media only screen and (min-width: 1199px) {
-    
-    #Menu{
-      display: none;
-
-    }
-      #Mobile{
-        display: none;
-      }
-
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(120deg);
-    }
-  }
-
-  
-  .flip-vertical-right {
-    -webkit-animation: flip-vertical-right 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate-reverse both;
-            animation: flip-vertical-right 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate-reverse both;
-  }
-
-
-
-
-@-webkit-keyframes flip-vertical-right {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  100% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+  .btn{
+    @apply px-12 py-2 text-white bg-blue-900 text-2xl hover:bg-purple-900 hover:text-white font-bold
   }
 }
+
+/* .heading{
+  border:10px dotted green;
+} */
+
+.active{
+  color:black;
+  text-decoration: underline;
+}
+.dropDownBtn{
+  color:black;
+  text-decoration: underline;
+  background-color: white;
+  border:none;
+  
+}
+.dropDownBtn:hover{
+  color:red;
+  text-decoration: underline;
+  background-color: white;
+  border:none;
+  Cursor:text ;
+  
+}
+.home{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.shop{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.shop:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+.product{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.product:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+
+.blog{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.blog:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+
+.page{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+}
+.page:hover{
+  background:none;
+  text-decoration: none;
+  display: block;
+  padding: 8px 25px ;
+  color: red;
+}
+
+
+
+.NavbatTxt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: red;
+  color:red;
+  transition:0.3s;
+
+  
+}
+
+.NavbatTxt:hover::after {
+  width: 100%;
+}
+
+
+.logo{
+
+    position: relative;
+    margin-left: 1.25rem;
+
+}
+.icone{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color:white;
+  text:black;
+  font-size:12px;
+    line-height:16px;
+    border-radius: 9999px;
+    padding-left:4px;
+    padding-right:4px;
+
+
+
+}
+.iconeNav:hover{
+  font-size:20px;
+    line-height:28px;
+  color:red;
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('./path/to/your/backgroundImage.jpg') no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.ripped-edge {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: white;
+  transform: translateY(-50%);
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+/* .text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333;
+} */
+
+
+
+.badge {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  background-color: #ff6f61;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.logo {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  background-color: #00bfa5;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.bottom-number {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 4rem;
+  color: rgba(255, 0, 0, 0.1);
+}
+
+#shopbg{
+
+  background-image: url('./assets/asset50.jpeg');
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+}
+
+/* footer-2 service menu css Start */
+.footerServiceMenu{
+  color:white;
+  list-style-type:disc;
+  font-size:  16px;
+  /* row-gap:50px; */
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+.footerServiceMenu:hover{
+  color:red;
+  
+  /* transition-duration: 0s; */
+  
+}
+.FooterTitle{
+  color:white;
+  size:20px;
+  margin-bottom: 25px;
+  font-size:  24px;
+  line-height:  32px;
+  
+}
+
+
+/* footer-2 service menu css End*/
+
+.homeIcecreem{
+  object-fit:cover;
+  outline: 5px solid white;
+  transition: 1s ease;
+}
+.homeIcecreem:hover{
+  transform: scale(1.1);
+}
+
+/* foter css start */
+.custom-search { 
+  position: relative; 
+  width: 600px; 
+} 
+.custom-search-input { 
+  width: 100%; 
+  border: 1px solid #ccc; 
+  border-radius: 100px; 
+  padding: 10px 100px 10px 20px;  
+  line-height: 1; 
+  box-sizing: border-box; 
+  color: #000;
+  outline: none; 
+  
+} 
+.custom-search-botton { 
+  position: absolute; 
+  right: 3px;  
+  top: 3px; 
+  bottom: 3px; 
+  border: 0; 
+  background: #ff0000; 
+  color: #fff; 
+  outline: none; 
+  margin: 0; 
+  padding: 0 10px; 
+  border-radius: 100px; 
+  z-index: 2; 
+} 
+/* foter end css */
+
+
+.custom-pagination .MuiPaginationItem-root:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+
+/* home page */
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+#slider {
+  background-image: url('./assets/bg-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Nav-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.home-bt-shop {
+  background-color: red;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 40px;
+  margin: 0 13px;
+}
+.home-bt-shop:hover {
+  background-color: black;
+}
+
+.home-bt2-shop {
+  background-color: black;
+  width: 160px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  border-radius: 40px;
+  margin-left: 20px;
+}
+.home-bt2-shop:hover {
+  background-color: red;
+}
+
+
+.spin_of {
+  /* background-size: cover; */
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(30deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spin-text {
+  line-height: 28px;
+  color: white;
+  margin-left: -85px;
+  z-index: 1;
+  font-weight: 700;
+}
+
+#good-root {
+  width: 130px;
+  height: 130px;
+  background-image: url('./assets/asset6.png');
+  background-size: cover;
+  border-radius: 100%;
+  margin-top: 150px;
+}
+
+.div2-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 65px;
+  color: red;
+}
+
+.info {
+  line-height: 25px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.div21-text {
+  font-family: Kalnia;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 65px;
+  color: red;
+  margin-left: 10px;
+}
+
+.flip-vertical-right {
+  animation: flip-vertical-right;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+
 @keyframes flip-vertical-right {
   0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
+    transform: rotateY(0);
   }
+  30% {
+    transform: rotateY(50deg);
+  }
+
+  60% {
+    transform: rotateY(0deg);
+  }
+
   100% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
+    transform: rotateY(-50deg);
   }
 }
 
-.slide-in-elliptic-top-fwd {
-	-webkit-animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.hello-heading {
+    /* color: #fff; */
+    font-family: "Playball", Sans-serif;
+    font-size: 50px;
+    text-transform: lowercase;
+    line-height: 55px;
+}
+
+/* home icone HomeProductCardMid css */
+
+/* .HomeProductCardMid {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.HomeProductCardMid:hover {
+  background-color: #ff0000;
+  color: #fff;
+} */
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 0.25rem;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.group:hover .tooltip {
+  opacity: 1;
 }
 
 
- @-webkit-keyframes slide-in-elliptic-top-fwd {
+.homeIcecreem{
+  object-fit:cover;
+  outline: 5px solid white;
+  transition: 1s ease;
+}
+.homeIcecreem:hover{
+  transform: scale(1.1);
+}
+
+.ManufactureImg{
+  object-fit:cover;
+  outline: 5px solid white;
+  transition: 1s ease;
+}
+.ManufactureImg:hover{
+  transform: scale(1.1);
+}
+
+
+/* Second Slide In Home Page Start */
+#Home-slider-main-com {
+  background-image: url('./assets/asset52.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-font {
+  font-family: Kalnia;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 800;
+}
+
+#texed {
+  font-family: Kalnia;
+  font-size: 20px;
+}
+
+#home-slider-button:hover {
+  background-color: #ff0000;
+  color: white;
+  transition-duration: 1s;
+}
+
+#home-slider-2 {
+  line-height: 40px;
+  font-weight:500;
+  font-family: Kalnia;
+}
+/* Second Slide In Home Page End */
+
+/* Map */
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.map-h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.google-map {
+  height: 500px;
+  width: 100%;
+}
+
+.pin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+}
+
+.pin-icon {
+  font-size: 30px; /* Adjust based on the icon library you use */
+}
+
+.pin-text {
+  margin-top: 10px;
+}
+
+
+
+/* Blog Card Css Start */
+/* Animation of animista */
+
+.slide-top {
+  display: inline-block; /* Ensure the element is inline-block or block for the animation to be visible */
+  transition: transform 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* Smooth transition */
+  /* background-color: ffffff; */
+  /* width: 200px; */
+  height: 200px;
+  background-color: color(from color srgb r g b);
+}
+
+.slide-top:hover {
+  transform: translateY(-50px); /* Apply the slide-top transformation on hover */
+}
+
+/* Keyframes for compatibility */
+@-webkit-keyframes slide-top {
   0% {
-    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-            transform: translateY(-600px) rotateX(-30deg) scale(0);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
-    -webkit-transform-origin: 50% 1400px;
-            transform-origin: 50% 1400px;
-    opacity: 1;
-    
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }
-
-@keyframes slide-in-elliptic-top-fwd {
+@keyframes slide-top {
   0% {
-    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-            transform: translateY(-600px) rotateX(-30deg) scale(0);
-    -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
-    -webkit-transform-origin: 50% 1400px;
-            transform-origin: 50% 1400px;
-    opacity: 1;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }
 
-
-.roll-in-left {
-	-webkit-animation: roll-in-left 2s ease-out both;
-	        animation: roll-in-left 2s ease-out both;
+#blog-card1-text {
+  line-height: 40px;
+  font-family: kalnia;
 }
 
-.roll-in-right {
-	        animation: roll-in-right 2s ease-out both;
+.tips-text {
+  font-family: kalnia;
 }
 
-
- @-webkit-keyframes roll-in-left {
-  0% {
-    -webkit-transform: translateX(-800px) rotate(-540deg);
-            transform: translateX(800px) rotate(540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-            transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-@keyframes roll-in-left {
-  0% {
-    -webkit-transform: translateX(-800px) rotate(-540deg);
-            transform: translateX(-800px) rotate(-540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-            transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes roll-in-right {
-  0% {
-    -webkit-transform: translateX(800px) rotate(540deg);
-            transform: translateX(800px) rotate(540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-            transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-
+/* Blog Card Css end */

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ProductCard from "../Component/ProductCart";
-import Footer from "../Component/Footer";
-import HomeProductCardMid from "../Component/Card";
-import Top from "../Component/Top";
+import ProductCard from "../Components/ProductCard";
+import Footer2 from "../Components/Footer2";
+import HomeProductCardMid from "../Components/Card";
+import Top from "../Components/Top";
 
 const Product = () => {
   const [activeTab, setActiveTab] = useState('reviews');
@@ -62,27 +62,20 @@ const Product = () => {
   <h1 className="text-3xl font-Kalnia">Releted Product</h1>
 </div>
 
-<div className="flex mx-2">
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
+<div className="gap-5">
+
+<HomeProductCardMid/>
 </div>
 
-<div className="flex justify-center my-5">
+<div className="container text-center flex justify-center my-5">
   <h1 className="text-3xl font-Kalnia">Recently Viewed Products</h1>
 </div>
 
-<br /><br />
-<div className="flex">
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
-<HomeProductCardMid />
 
-</div>
-<br /><br />
-      <Footer/>
+<HomeProductCardMid/>
+
+<div className="mt-5"></div>
+      <Footer2 />
     </div>
   );
 };

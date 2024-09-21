@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import Raoutes from './Routes/Raoutes'
+import React from 'react'
+import Layout from './Routes/Routes'
 
-const App =() => {
 
+const App = () => {
   return (
-     <Raoutes/>
+    <div>
+        
+        <Layout/>
+    </div>
   )
 }
 

@@ -1,12 +1,21 @@
-import React from "react";
-import logo from "../assets/asset 0.svg";
-import { NavLink, Outlet } from "react-router-dom";
-import { useState } from "react";
-import navImg1 from '../assets/asset 1.jpeg'
-import navImg2 from '../assets/asset 2.jpeg'
-import navImg3 from '../assets/asset 3.jpeg'
+import React, { useState } from "react";
+import Weblogo from "../assets/asset0.svg";
+import { NavLink, Outlet, useNavigate } from "react-router-dom"; // Added useNavigate
+import IconBar from "./icone";
+import "./Navbar.css";
+import { FaGripVertical, FaHeart, FaSearch, FaUser } from "react-icons/fa";
+import navImg1 from '../assets/asset1.jpeg'
+import navImg2 from '../assets/asset2.jpeg'
+import navImg3 from '../assets/asset3.jpeg'
 
 const Navbar = () => {
+  const [activeMenu, setActiveMenu] = useState(null);
+  const navigate = useNavigate(); // Initializing useNavigate
+
+  const toggleMenu = (menu) => {
+    setActiveMenu(activeMenu === menu ? null : menu);
+  };
+
 
   const [HomeVisible, setHomeVisible] = useState(false);
 
@@ -19,6 +28,7 @@ const Navbar = () => {
   const [pageVisible, setPageVisible] = useState(false);
 
   const [SideMenuVisible, setSideMenuVisible] = useState(false);
+
 
   const HomeMenu = () => {
     return (
@@ -63,7 +73,7 @@ const Navbar = () => {
             <div className="flex justify-around">
               <div className="space-y-2 mt-5">
              <h1 className="font-bold text-[20px]">Shop Style</h1>
-              <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Standard</NavLink> 
+              <NavLink to="" className="text-gray-500 block hover:text-red-500 ">Shop Standard</NavLink> 
               <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Full</NavLink>
               <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Only Category</NavLink>
               <NavLink to="" className="text-gray-500 block hover:text-red-500">Shop Icon Category</NavLink>
@@ -203,7 +213,7 @@ const Navbar = () => {
     return (
       <div className="">
       <ul className="flex justify-around">
-        <div className="absolute bg-gray-50 text-black h-[400px] w-[900px]">
+        <div className="absolute bg-gray-50 text-black h-[500px] w-[900px]">
          
           <div className="flex justify-around">
             <div className="space-y-5  mt-5">
@@ -351,55 +361,37 @@ const Navbar = () => {
     setSideMenuVisible(false);
   };
 
+
   return (
-    <div className="overflow-hidden">
-      <div className="z-20 fixed w-full bg-white border-gray-200 dark:bg-gray-900 px-10 h-[100px]">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-
-          <NavLink to="Menu" id="Menu" className="text-[20px] "
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave} >
-            <i class="fa-solid fa-bars"></i>
-            {SideMenuVisible && SideMenu()}
-          </NavLink>
-
-          <NavLink to="home" className="rtl:space-x-reverse">
-            <img
-              id="logo"
-              className=" size-16 md:size-24 "
-              src={logo}
-              alt="Not Found"
-            />
-          </NavLink>
-
-          <div className="items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <div className="flex lg:space-x-6 list-none text-[20px]">
-              <NavLink to="/search" className=" hover:text-red-500">
-                <i className="fa-solid fa-magnifying-glass" id="icon"></i>
-              </NavLink>
-
-              <NavLink to="/account" className=" hover:text-red-500">
-                <i className="fa-regular fa-user" id="icon"></i>
-              </NavLink>
-
-              <NavLink to="/wishlist" className=" hover:text-red-500">
-                <i className="fa-regular fa-heart" id="icon"></i>
-              </NavLink>
-
-              <NavLink to="/cart" className=" hover:text-red-500">
-                <i className="fa-solid fa-basket-shopping"></i>
-              </NavLink>
+    <>
+      <div className="bg-[#fff] w-full h-28 flex justify-around items-center z-50  sticky top-0">
+        <div className="container">
+          <div className="flex items-center justify-between ml-5">
+            <div className="" id="toggelmenuTop">
+              <button
+                onClick={() => toggleMenu("mobile")}
+                className="text-gray-950"
+              >
+                ☰
+              </button>
             </div>
-          </div>
-          <div
-            className="items-center justify-between space-x-10 none w-full md:flex md:w-auto md:order-1"
-            id="navbar"
-          >
-            <ul className="flex text-[16px] space-x-12 font-semibold md:p-0 border border-gray-100 rounded-lg bg-gray-50 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-600">
-              <NavLink to="home"
+            <button
+              className="flex items-center rtl:space-x-reverse"
+              onClick={() => navigate("/")} // Navigate to home
+            >
+              <img
+                id="logo"
+                className="size-24"
+                src={Weblogo}
+                alt="Not Found"
+              />
+            </button>
+            <div className="hidden md:flex space-x-16" id="toggle">
+
+              <NavLink to="/"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
+                className="underline-animate block  text-black  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
               >
                 Home <i className="fa-solid fa-angle-down"></i>
                 {HomeVisible && HomeMenu()}
@@ -408,17 +400,20 @@ const Navbar = () => {
               <NavLink to="shop"
                 onMouseEnter={shophandleMouseEnter}
                 onMouseLeave={shophandleMouseLeave}
-                className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
+                className="underline-animate block text-black
+                 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
               >
                 Shop {" "}
                 <i className="fa-solid fa-angle-down"></i>
                   {shopVisible && ShopMenu()}
               </NavLink>
 
+
+          
               <NavLink to="product"
                 onMouseEnter={producthandleMouseEnter}
                 onMouseLeave={producthandleMouseLeave}
-                className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
+                className="underline-animate block  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
               >
                 Product <i className="fa-solid fa-angle-down"></i>
                 {productVisible && ProductMenu()}
@@ -427,35 +422,85 @@ const Navbar = () => {
               <NavLink to="blog"
                 onMouseEnter={bloghandleMouseEnter}
                 onMouseLeave={bloghandleMouseLeave}
-                className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
+                className="underline-animate block  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
               >
                 Blog <i className="fa-solid fa-angle-down"></i>
                 {blogVisible && BlogMenu()}
               </NavLink>
 
-              <NavLink to="about"
+              <NavLink to=""
                 onMouseEnter={pagehandleMouseEnter}
                 onMouseLeave={pagehandleMouseLeave}
-                className="underline-animate block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
+                className="underline-animate text-black block  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-500 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-600 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-600"
               >
                 Page <i className="fa-solid fa-angle-down"></i>
                 {pageVisible && PageMenu()}
               </NavLink>
-            </ul>
+
+            </div>
+            <div className="flex justify-between items-center">
+              <IconBar />
+            </div>
           </div>
+
+          {activeMenu === "mobile" && (
+            <ul
+              id="toggelmenuTop"
+              className=" bg-[#ffffff] text-black text-xl font-bold space-y-4 py-4 px-4 w-full"
+            >
+              <li>
+                <NavLink to="/" onClick={() => toggleMenu(null)}>
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/shop" onClick={() => toggleMenu(null)}>
+                  Shop
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/product" onClick={() => toggleMenu(null)}>
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/blog" onClick={() => toggleMenu(null)}>
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/page" onClick={() => toggleMenu(null)}>
+                  Page
+                </NavLink>
+              </li>
+            </ul>
+          )}
+        </div>
+
+        <div
+          className="w-full justify-evenly flex fixed bg-white h-16 bottom-0"
+          id="toggelHiden"
+        >
+          <a className="w-24 h-full flex flex-col justify-center items-center">
+            <FaGripVertical />
+            Shop
+          </a>
+          <a className="w-24 h-full flex flex-col justify-center items-center">
+            <FaUser />
+            Account
+          </a>
+          <a className="w-24 h-full flex flex-col justify-center items-center">
+            <FaSearch />
+            Search
+          </a>
+          <a className="w-24 h-full flex flex-col justify-center items-center">
+            <FaHeart />
+            Wishlist
+          </a>
         </div>
       </div>
-
-
-     <div className='w-full h-[60px] fixed bottom-0 flex justify-around bg-white z-20' id='Mobile'>
-      <NavLink to="shop" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-table-cells"></i>Shop</NavLink>
-      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-user"></i> Account</NavLink>
-      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-solid fa-magnifying-glass"></i> Search</NavLink>
-      <NavLink to="" className=' w-24 h-full flex flex-col justify-center items-center  hover:text-red-600'><i class="fa-regular fa-heart"></i> Wishlist</NavLink>
-    </div>
-
       <Outlet />
-    </div>
+    </>
   );
 };
 
