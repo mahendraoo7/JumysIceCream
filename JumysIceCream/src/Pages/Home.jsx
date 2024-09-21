@@ -17,8 +17,8 @@ const Home = () => {
     <>
       <Top />
       <SliderHome />
-      <div className="container flex flex-col md:flex-row gap-10 md:gap-20 justify-around items-center h-auto md:h-[500px] p-4">
-        <div>
+      <div className="container flex flex-col md:flex-row gap-10 md:gap-20 justify-around items-center h-auto md:h-[500px] p-4 ">
+        <div className="bg-[url('${bg}')]">
           <div className="flex flex-col md:flex-row items-center w-full md:w-[400px]">
             <div className="text-red-600 font-bold font-serif text-[40px] md:text-[50px] mb-4 md:mb-0">
               <h1 className="font-Kalnia">

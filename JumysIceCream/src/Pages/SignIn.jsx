@@ -76,8 +76,8 @@ function SignIn() {
               </button>
             </div>
             <p className="mt-3 text-sm text-red-600 text-center">
-            Don't have an account?{" "}
-              <a
+               Don't have an account?{" "}
+              <a  
                 href="#"
                 title=""
                 className="font-semibold text-gray-950 hover:text-red-600 underline"

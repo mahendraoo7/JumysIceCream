@@ -124,7 +124,6 @@ const Navbar = () => {
               </div>
               </div>
               
-              
              </div>
           </div>  
         </ul>
@@ -377,7 +376,7 @@ const Navbar = () => {
             </div>
             <button
               className="flex items-center rtl:space-x-reverse"
-              onClick={() => navigate("/")} // Navigate to home
+              onClick={() => navigate("/")} // Game===><===
             >
               <img
                 id="logo"
@@ -469,7 +468,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/page" onClick={() => toggleMenu(null)}>
+                <NavLink to="" onClick={() => toggleMenu(null)}>
                   Page
                 </NavLink>
               </li>

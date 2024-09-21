@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 import slider1_img from "../assets/asset5.png";
 import img_plant from "../assets/asset38.png";
 import spin from "../assets/asset4.svg";
+import bg from "../assets/bg-3.jpg"
   
   const SliderHome = () => {
       return (
           <div className='w-full h-auto flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 p-4 md:p-8' id='slider'>
+                
               {/* Content Section */}
               <div className='flex-1 max-w-lg'>
                   <h4 className='text-lg md:text-xl font-semibold'>ICE CREAM SMILES</h4>

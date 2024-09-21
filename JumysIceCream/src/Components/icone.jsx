@@ -6,17 +6,17 @@ import { NavLink } from "react-router-dom";
 
 const IconBars = () => {
   return (
-    <div className="flex items-center space-x-6 mr-5">
+    <div className="flex items-center ">
       <NavLink to="/">
         <div className="relative" id="icon1">
-          <FontAwesomeIcon icon={faSearch} className="iconeNav" />
+          <FontAwesomeIcon icon={faSearch} className="iconeNav mr-5" />
           </div>
       </NavLink>
 
        <NavLink to="/login">
  
           <div className="relative" id="icon1">
-           <FontAwesomeIcon icon={faUser} className="iconeNav" />
+           <FontAwesomeIcon icon={faUser} className="iconeNav mr-5" />
          </div>
 
        </NavLink>
@@ -24,7 +24,7 @@ const IconBars = () => {
       <NavLink to="/">
 
          <div className="relative" id="icon1">
-         <FontAwesomeIcon icon={faHeart} className="iconeNav" />
+         <FontAwesomeIcon icon={faHeart} className="iconeNav mr-5" />
          <span className="icone"></span>
        </div>
 
@@ -34,7 +34,7 @@ const IconBars = () => {
       <NavLink to="/">
 
         <div className="relative">
-          <FontAwesomeIcon icon={faShoppingBasket} className="iconeNav" />
+          <FontAwesomeIcon icon={faShoppingBasket} className="iconeNav mr-5" />
           <span className="icone"></span>
        </div>
       </NavLink>

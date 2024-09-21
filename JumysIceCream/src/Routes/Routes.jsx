@@ -15,6 +15,7 @@ import Error404 from '../Pages/Error404';
 
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Register from '../Pages/Register';
 
 const PageRouter = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const PageRouter = createBrowserRouter([
       {
         path: '/page404', // Add the Error404 route
         element: <Error404 />
+      },
+      {
+        path: '/register', // Add the Error404 route
+        element: <Register/>
       }
   
       

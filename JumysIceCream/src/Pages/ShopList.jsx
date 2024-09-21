@@ -1,7 +1,5 @@
-
 import React, { useState } from 'react';
 import { Pagination, Stack } from '@mui/material';
-
 import FilterComponent from "../Components/FilterComponent";
 import ProductCardProductList from "../Components/ProductCardProductList";
 import Footer from "../Components/Footer";
