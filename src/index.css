@@ -47,18 +47,18 @@
 
 .active{
   color:black;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .dropDownBtn{
   color:black;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   background-color: white;
   border:none;
   
 }
 .dropDownBtn:hover{
   color:red;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   background-color: white;
   border:none;
   Cursor:text ;
@@ -187,7 +187,7 @@ body, html {
   width: 100%;
   height: 100vh;
   background: url('./path/to/your/backgroundImage.jpg') no-repeat center center/cover;
-  overflow:  ;
+ 
 }
 
 .ripped-edge {

@@ -31,9 +31,11 @@ const Navbar = () => {
 
 
   const HomeMenu = () => {
+
+    
     return (
-      <div className="">
-        <ul className="duration-1000 flex justify-center">
+      <div className="Home duration-1000">
+        <ul className="flex justify-center">
           <div className="absolute bg-gray-50 text-black w-[150px] h-[300px] flex flex-col items-center space-y-3">
             <NavLink to="" className="hover:text-red-500">
               <li className="mt-5">Home 1</li>
