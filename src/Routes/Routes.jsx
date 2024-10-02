@@ -8,7 +8,7 @@ import Page from '../Pages/Page';
 import Contact from '../Pages/Contact';
 import ShopList from '../Pages/ShopList'; // Import the ShopList component
 import Login from '../Pages/Login'; 
-import Wishlist from '../Pages/Wishlist';
+import Wishlist from '../Pages/WishList';
 import AboutUs from '../Pages/AboutUs';
 import Faq2 from '../Pages/Faq-2';
 import Error404 from '../Pages/Error404';
