@@ -21,7 +21,7 @@ const IconBars = () => {
 
        </NavLink>
 
-      <NavLink to="/">
+      <NavLink to="/wishlist">
 
          <div className="relative" id="icon1">
          <FontAwesomeIcon icon={faHeart} className="iconeNav mr-5" />
