@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Home from '../Pages/Home';
-import Shop from '../Pages/Shop';
+import Shop from '../Pages/Shop'; 
 import Product from '../Pages/Product';
 import Blog from '../Pages/Blog';
 import Page from '../Pages/Page';
@@ -74,8 +74,7 @@ const PageRouter = createBrowserRouter([
         path: '/register', // Add the Error404 route
         element: <Register/>
       }
-  
-      
+
     ]
   }
 ]);
