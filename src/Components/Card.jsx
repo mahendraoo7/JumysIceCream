@@ -14,7 +14,7 @@ import assets24 from "../assets/asset24.webp";
 import assets25 from "../assets/asset25.webp";
 import assets28 from "../assets/asset28.webp";
 import assets29 from "../assets/asset29.webp";
-import assets30 from "../assets/asset30.webp";
+import assets30 from "../assets/asset30.webp";  
 import assets31 from "../assets/asset31.webp";
 import assets32 from "../assets/asset32.webp";
 import assets33 from "../assets/asset33.jpeg";
@@ -24,7 +24,7 @@ import assets66 from "../assets/asset66.webp";
 import assets67 from "../assets/asset67.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+ 
 const HomeProductCardMid = ({
   title,
   price,
